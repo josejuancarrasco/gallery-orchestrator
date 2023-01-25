@@ -1,0 +1,4 @@
+com\gallery\app\orchestrator\domain\api\ArtistService.class
+com\gallery\app\orchestrator\domain\port\ArtistPort.class
+com\gallery\app\orchestrator\domain\api\ArtistServiceImp.class
+com\gallery\app\orchestrator\domain\model\ArtistDomain.class

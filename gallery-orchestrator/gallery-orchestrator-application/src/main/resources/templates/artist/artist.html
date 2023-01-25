@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+
+<head th:replace="layout :: head">
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+	<div class="container-fluid" layout:fragment="page-content">
+
+		<h2 th:text="${edit} == true ? 'Editar Artista' : 'Agregar Artista'"></h2>
+
+		<div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)"
+			th:if="${mensaje != null}" th:text="${mensaje}" class="alert">
+		</div>
+
+		<form th:object="${artist}"
+			th:action="${edit} == true ? @{/artist/update/} + ${artist.artistId} : @{/artist/save/}"
+			th:method="post">
+
+			<div class="form-group">
+				<label for="givenNames">Nombre del Artista</label> 
+				<input
+					autocomplete="off" autofocus th:field="*{givenNames}"
+					id="givenNames" type="text" class="form-control"
+					th:classappend="${#fields.hasErrors('givenNames')} ? 'is-invalid' : ''">
+					
+				<div class="invalid-feedback" th:errors="*{givenNames}"></div>
+			</div>
+
+			<div class="form-group">
+				<label for="surnames">Primer apellido</label> 
+				<input
+					autocomplete="off" th:field="*{surnames}" id="surnames" type="text"
+					class="form-control"
+					th:classappend="${#fields.hasErrors('surnames')} ? 'is-invalid' : ''">
+					
+				<div class="invalid-feedback" th:errors="*{surnames}"></div>
+			</div>
+
+			<div class="form-group">
+			<input type="submit" value="Guardar" class="btn btn-success">
+				&nbsp;<a class="btn btn-warning" th:href="@{/artista/list}">Ver
+					todos</a>
+			</div>
+		</form>
+	</div>
+
+	<!--OTRO SCRIPTS PARA PAGINAS-->
+	<th:block layout:fragment="page-scripts">
+
+	</th:block>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+com\gallery\app\orchestrator\application\mapper\ArtistMapperImpl.class
+com\gallery\app\orchestrator\application\mapper\ArtistMapper.class
+com\gallery\app\orchestrator\application\controller\GalleryHomeController.class
+com\gallery\app\orchestrator\application\configuration\ApplicationConfiguration.class
+com\gallery\app\orchestrator\application\controller\GalleryArtistController.class
+com\gallery\app\orchestrator\application\dto\ArtistDto.class

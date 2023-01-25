@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  jmx:
+    enabled: false
+   
+gallery-host:
+  artist: http://${DOCKER_HOST}:8082/artist/
+  artwork: http://${DOCKER_HOST}:8083/artwork/
+
+  

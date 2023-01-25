@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+
+<head th:replace="layout :: head">
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+	<div class="container-fluid" layout:fragment="page-content">
+
+
+		<h2>Artistas</h2>
+		<div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)"
+			th:if="${mensaje != null}" th:text="${mensaje}" class="alert">
+		</div>
+
+		<a class="btn btn-success mb-2" th:href="@{/artist/add/}"
+			th:method="get">Agregar</a>
+
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Opciones</th>
+
+					</tr>
+				</thead>
+
+				<tbody id="tabla">
+					<tr th:each="artist : ${artistList}">
+						<td th:text="${artist.givenNames}"></td>
+						<td th:text="${artist.surnames}"></td>
+
+						<td><a class="btn btn-primary" href="#" th:method="get">Articulos
+								<i class="fa fa-list"></i>
+						</a> <a class="btn btn-warning"
+							th:href="@{/artist/} + ${artist.artistId}" th:method="get">Editar
+								<i class="fa fa-edit"></i>
+						</a> <a class="btn btn-danger"
+							th:href="@{/artist/delete/} + ${artist.artistId}"
+							th:method="get">Eliminar <i class="fa fa-trash"></i>
+						</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!--OTRO SCRIPTS PARA PAGINAS-->
+	<th:block layout:fragment="page-scripts">
+
+	</th:block>
+
+</body>
+</html>

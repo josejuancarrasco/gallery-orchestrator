@@ -1,0 +1,10 @@
+com\gallery\app\orchestrator\infrastructure\wrapper\ArtistEntityList.class
+com\gallery\app\orchestrator\infrastructure\config\InfrastuctureConfiguration.class
+com\gallery\app\orchestrator\infrastructure\rest\ArtistApiClientImp.class
+com\gallery\app\orchestrator\infrastructure\adapter\ArtistAdapter.class
+com\gallery\app\orchestrator\infrastructure\mapper\ArtistEntityMapper.class
+com\gallery\app\orchestrator\infrastructure\entity\ArtistEntity$ArtistEntityBuilder.class
+com\gallery\app\orchestrator\infrastructure\mapper\ArtistEntityMapperImpl.class
+com\gallery\app\orchestrator\infrastructure\rest\ArtistApiClient.class
+com\gallery\app\orchestrator\infrastructure\rest\ArtistApiClientImp$1.class
+com\gallery\app\orchestrator\infrastructure\entity\ArtistEntity.class
