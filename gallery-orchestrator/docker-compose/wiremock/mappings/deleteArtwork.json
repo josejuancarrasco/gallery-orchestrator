@@ -1,0 +1,12 @@
+{
+  "request": {
+    "url": "/artwork/1",
+    "method": "DELETE"
+  },
+  "response": {
+    "status": 200,
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}

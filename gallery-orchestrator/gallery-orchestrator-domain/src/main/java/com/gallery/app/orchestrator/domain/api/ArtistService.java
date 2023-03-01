@@ -14,5 +14,5 @@ public interface ArtistService {
 	
 	public void saveArtist(ArtistDomain artist) throws Exception;
 	
-	public ArtistDomain UpdateArtist(String artistId, ArtistDomain artist) throws Exception;
+	public ArtistDomain updateArtist(String artistId, ArtistDomain artist) throws Exception;
 }

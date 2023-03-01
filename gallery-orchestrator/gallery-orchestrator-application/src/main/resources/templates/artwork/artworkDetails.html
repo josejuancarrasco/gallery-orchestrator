@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+
+<head th:replace="layout :: head">
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+	<div class="container-fluid" layout:fragment="page-content">
+		<div class="row">
+			<div class="col-md-6">
+				<div>
+					<img class="img-fluid rounded mx-auto d-block text-nowrap"
+						th:src="@{'data:image/jpeg;base64,'+${artwork.photo}}"
+						height="350" width="350" />
+				</div>
+			</div>
+
+			<div class="col-md-6">
+
+				<h1 th:text="${artwork.title}"></h1>
+				<h3 th:text="${artist.givenNames} + ' ' + ${artist.surnames}"></h3>
+
+				<label>Numeración:</label> <a th:text="${artwork.numeration}"></a>
+				<div>
+					<label>Firmado:</label> <a
+						th:text="${artwork.signed == true ? 'Si' : 'No'}"></a>
+				</div>
+				<div>
+					<label>Editor:</label> <a th:text="${artwork.editor}"></a>
+				</div>
+				<div class="pt-2">
+					<label>Descripcion:</label>
+					<p th:text="${artwork.description}"></p>
+				</div>
+				<div>
+					<label>Estado:</label> <a th:text="${artwork.artworkStatus}"></a>
+				</div>
+
+
+			</div>
+		</div>
+		<div class="row pt-4">
+
+			<div class="col">
+				<h2 class="row justify-content-md-center" th:text="Transacciones"></h2>
+				<a class="btn btn-success mb-2" th:href="@{/transaction/add/} + ${artwork.artworkId}"
+					th:method="get"> Agregar </a>
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Tipo</th>
+								<th>Precio</th>
+								<th>Fecha</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="transaction : ${transactionList}">
+								<td th:text="${transaction.transactionType}"></td>
+								<td th:text="${transaction.price}"></td>
+								<td th:text="${transaction.date}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!--OTRO SCRIPTS PARA PAGINAS-->
+	<th:block layout:fragment="page-scripts">
+
+	</th:block>
+
+</body>
+</html>

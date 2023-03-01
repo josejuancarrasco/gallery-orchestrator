@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+
+<head th:replace="layout :: head">
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+	<div class="container-fluid" layout:fragment="page-content">
+
+		<h2 th:text="${edit} == true ? 'Editar Transacción' : 'Agregar Transacción'"></h2>
+
+		<div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)"
+			th:if="${mensaje != null}" th:text="${mensaje}" class="alert">
+		</div>
+
+		<form
+			th:action="${edit} == true ? @{/transaction/update/} + ${transaction.transactionId} : @{/transaction/save/} + ${transaction.artworkId}"
+			th:method="post">
+
+			<div class="form-group mb-3">
+				<label for="price"> Precio </label> <input 
+					th:field="*{transaction.price}" id="price" type="number"
+					step="100.00" class="form-control"
+					th:classappend="${#fields.hasErrors('transaction.price')} ? 'is-invalid' : ''">
+
+				<div class="invalid-feedback" th:errors="*{transaction.price}"></div>
+			</div>
+
+			<div class="form-group mb-3">
+				<label for="transactionType"> Tipo transaccion </label> 
+				<select
+					class="form-control" name="tipo" th:field="*{transaction.transactionType}">
+					<option
+						th:each="type : ${T(com.gallery.app.orchestrator.domain.common.TransactionTypeEnum).values()}"
+						th:value="${type}" th:text="${type.value}">
+					</option>
+				</select>
+
+				<div class="invalid-feedback"
+					th:errors="*{transaction.transactionType}"></div>
+			</div>
+			
+			<div class="form-group mb-3">
+				<label for="date"> Fecha </label> <input 
+					th:field="*{transaction.date}" id="date" type="date"
+					class="form-control">
+			</div>
+
+			<div class="form-group">
+			<input type="submit" value="Guardar" class="btn btn-success">
+				&nbsp;<a class="btn btn-warning" th:href="@{/transaction/list/}">Ver
+					todos</a>
+			</div>
+		</form>
+	</div>
+
+	<!--OTRO SCRIPTS PARA PAGINAS-->
+	<th:block layout:fragment="page-scripts">
+
+	</th:block>
+
+</body>
+</html>

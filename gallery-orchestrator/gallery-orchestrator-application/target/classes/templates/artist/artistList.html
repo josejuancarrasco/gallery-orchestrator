@@ -36,7 +36,7 @@
 						<td th:text="${artist.givenNames}"></td>
 						<td th:text="${artist.surnames}"></td>
 
-						<td><a class="btn btn-primary" href="#" th:method="get">Articulos
+						<td><a class="btn btn-primary" th:href="@{/artwork/artist/} + ${artist.artistId}" th:method="get">Articulos
 								<i class="fa fa-list"></i>
 						</a> <a class="btn btn-warning"
 							th:href="@{/artist/} + ${artist.artistId}" th:method="get">Editar

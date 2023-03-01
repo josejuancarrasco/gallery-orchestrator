@@ -7,9 +7,9 @@ import com.gallery.app.orchestrator.domain.port.ArtistPort;
 
 public class ArtistServiceImp implements ArtistService{
 	
-	private ArtistPort artistPort;
+	private final ArtistPort artistPort;
 	
-	public ArtistServiceImp(ArtistPort artistPort) {
+	public ArtistServiceImp(final ArtistPort artistPort) {
 		this.artistPort = artistPort;
 	}
 
@@ -37,7 +37,7 @@ public class ArtistServiceImp implements ArtistService{
 	}
 
 	@Override
-	public ArtistDomain UpdateArtist(String artistId, ArtistDomain artist) throws Exception {
+	public ArtistDomain updateArtist(String artistId, ArtistDomain artist) throws Exception {
 		return this.artistPort.updateArtist(artistId, artist);
 		
 	}

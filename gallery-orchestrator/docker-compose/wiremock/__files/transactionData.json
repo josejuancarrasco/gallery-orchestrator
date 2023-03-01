@@ -1,0 +1,7 @@
+{
+	"transactionId": "1",
+	"transactionType": "VENTA",
+	"date" : "2023-02-20",
+	"price": 255.55,
+	"artworkId": "1"
+}

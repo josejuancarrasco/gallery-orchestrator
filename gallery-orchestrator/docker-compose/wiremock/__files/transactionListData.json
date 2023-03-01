@@ -1,0 +1,23 @@
+[
+	{
+		"transactionId": "1",
+		"transactionType": "VENTA",
+		"date" : "2023-02-20",
+		"price": 455.55,
+		"artworkId": "1"
+	},
+	{
+		"transactionId": "2",
+		"transactionType": "COMPRA",
+		"date" : "2023-01-30",
+		"price": 255.55,
+		"artworkId": "1"
+	},
+	{
+		"transactionId": "3",
+		"transactionType": "OFERTA",
+		"date" : "2023-01-20",
+		"price": 255.55,
+		"artworkId": "1"
+	}
+]

@@ -75,7 +75,7 @@ public class GalleryArtistController {
 			return "artist/artist";
 		}	
 		
-		this.artistService.UpdateArtist(artistId, this.artistMapper.toDomain(artist));
+		this.artistService.updateArtist(artistId, this.artistMapper.toDomain(artist));
 		
 		return "redirect:/artist/list/";	
 	}

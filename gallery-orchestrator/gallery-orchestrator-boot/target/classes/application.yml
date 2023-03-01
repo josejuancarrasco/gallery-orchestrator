@@ -1,11 +1,16 @@
 server:
-  port: 8080
+   port: 8080
 spring:
-  jmx:
-    enabled: false
-   
-gallery-host:
-  artist: http://${DOCKER_HOST}:8082/artist/
-  artwork: http://${DOCKER_HOST}:8083/artwork/
+   jmx:
+      enabled: false
+   servlet:
+      multipart:
+         enabled: true
+         max-request-size: 10MB
+         max-file-size: 10MB
+         location: ${java.io.tmpdir}
 
-  
+gallery-host:
+   artist: http://${DOCKER_HOST}:8082/artist/
+   artwork: http://${DOCKER_HOST}:8083/artwork/
+   transaction: http://${DOCKER_HOST}:8084/transaction/

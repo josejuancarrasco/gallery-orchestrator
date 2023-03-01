@@ -1,0 +1,13 @@
+{
+  "request": {
+    "url": "/artist/",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "artistListData.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}
