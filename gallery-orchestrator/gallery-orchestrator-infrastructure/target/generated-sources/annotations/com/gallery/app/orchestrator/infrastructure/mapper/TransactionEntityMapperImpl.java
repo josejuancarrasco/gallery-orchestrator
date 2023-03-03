@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-01T13:42:23+0100",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 1.4.200.v20220802-0458, environment: Java 17.0.4.1 (Oracle Corporation)"
+    date = "2023-03-02T13:45:56+0100",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 @Component
 public class TransactionEntityMapperImpl implements TransactionEntityMapper {
@@ -23,8 +23,11 @@ public class TransactionEntityMapperImpl implements TransactionEntityMapper {
 
         TransactionDomain transactionDomain = new TransactionDomain();
 
-        if ( transactionEntity.getArtworkId() != null ) {
-            transactionDomain.setArtworkId( transactionEntity.getArtworkId() );
+        if ( transactionEntity.getTransactionId() != null ) {
+            transactionDomain.setTransactionId( transactionEntity.getTransactionId() );
+        }
+        if ( transactionEntity.getTransactionType() != null ) {
+            transactionDomain.setTransactionType( transactionEntity.getTransactionType() );
         }
         if ( transactionEntity.getDate() != null ) {
             transactionDomain.setDate( transactionEntity.getDate() );
@@ -32,11 +35,8 @@ public class TransactionEntityMapperImpl implements TransactionEntityMapper {
         if ( transactionEntity.getPrice() != null ) {
             transactionDomain.setPrice( transactionEntity.getPrice() );
         }
-        if ( transactionEntity.getTransactionId() != null ) {
-            transactionDomain.setTransactionId( transactionEntity.getTransactionId() );
-        }
-        if ( transactionEntity.getTransactionType() != null ) {
-            transactionDomain.setTransactionType( transactionEntity.getTransactionType() );
+        if ( transactionEntity.getArtworkId() != null ) {
+            transactionDomain.setArtworkId( transactionEntity.getArtworkId() );
         }
 
         return transactionDomain;
@@ -50,20 +50,20 @@ public class TransactionEntityMapperImpl implements TransactionEntityMapper {
 
         TransactionEntity transactionEntity = new TransactionEntity();
 
-        if ( transactionDomain.getArtworkId() != null ) {
-            transactionEntity.setArtworkId( transactionDomain.getArtworkId() );
-        }
-        if ( transactionDomain.getDate() != null ) {
-            transactionEntity.setDate( transactionDomain.getDate() );
-        }
-        if ( transactionDomain.getPrice() != null ) {
-            transactionEntity.setPrice( transactionDomain.getPrice() );
-        }
         if ( transactionDomain.getTransactionId() != null ) {
             transactionEntity.setTransactionId( transactionDomain.getTransactionId() );
         }
         if ( transactionDomain.getTransactionType() != null ) {
             transactionEntity.setTransactionType( transactionDomain.getTransactionType() );
+        }
+        if ( transactionDomain.getPrice() != null ) {
+            transactionEntity.setPrice( transactionDomain.getPrice() );
+        }
+        if ( transactionDomain.getDate() != null ) {
+            transactionEntity.setDate( transactionDomain.getDate() );
+        }
+        if ( transactionDomain.getArtworkId() != null ) {
+            transactionEntity.setArtworkId( transactionDomain.getArtworkId() );
         }
 
         return transactionEntity;

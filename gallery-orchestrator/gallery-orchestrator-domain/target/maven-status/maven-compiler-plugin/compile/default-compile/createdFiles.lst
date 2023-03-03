@@ -1,4 +1,14 @@
 com\gallery\app\orchestrator\domain\api\ArtistService.class
-com\gallery\app\orchestrator\domain\port\ArtistPort.class
+com\gallery\app\orchestrator\domain\port\ArtworkPort.class
+com\gallery\app\orchestrator\domain\api\TransactionService.class
 com\gallery\app\orchestrator\domain\api\ArtistServiceImp.class
+com\gallery\app\orchestrator\domain\api\TransactionServiceImp.class
+com\gallery\app\orchestrator\domain\common\ArtworkStatusEnum.class
+com\gallery\app\orchestrator\domain\port\TransactionPort.class
+com\gallery\app\orchestrator\domain\common\TransactionTypeEnum.class
+com\gallery\app\orchestrator\domain\port\ArtistPort.class
+com\gallery\app\orchestrator\domain\api\ArtworkService.class
 com\gallery\app\orchestrator\domain\model\ArtistDomain.class
+com\gallery\app\orchestrator\domain\api\ArtworkServiceImp.class
+com\gallery\app\orchestrator\domain\model\ArtworkDomain.class
+com\gallery\app\orchestrator\domain\model\TransactionDomain.class

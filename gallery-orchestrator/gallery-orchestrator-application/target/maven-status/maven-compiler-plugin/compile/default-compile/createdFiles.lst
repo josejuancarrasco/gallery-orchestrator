@@ -1,6 +1,14 @@
 com\gallery\app\orchestrator\application\mapper\ArtistMapperImpl.class
-com\gallery\app\orchestrator\application\mapper\ArtistMapper.class
-com\gallery\app\orchestrator\application\controller\GalleryHomeController.class
+com\gallery\app\orchestrator\application\mapper\TransactionMapperImpl.class
+com\gallery\app\orchestrator\application\controller\GalleryTransactionController.class
+com\gallery\app\orchestrator\application\mapper\ArtworkMapperImpl.class
 com\gallery\app\orchestrator\application\configuration\ApplicationConfiguration.class
-com\gallery\app\orchestrator\application\controller\GalleryArtistController.class
+com\gallery\app\orchestrator\application\mapper\TransactionMapper.class
 com\gallery\app\orchestrator\application\dto\ArtistDto.class
+com\gallery\app\orchestrator\application\dto\TransactionDto.class
+com\gallery\app\orchestrator\application\mapper\ArtworkMapper.class
+com\gallery\app\orchestrator\application\mapper\ArtistMapper.class
+com\gallery\app\orchestrator\application\dto\ArtworkDto.class
+com\gallery\app\orchestrator\application\controller\GalleryArtworkController.class
+com\gallery\app\orchestrator\application\controller\GalleryHomeController.class
+com\gallery\app\orchestrator\application\controller\GalleryArtistController.class

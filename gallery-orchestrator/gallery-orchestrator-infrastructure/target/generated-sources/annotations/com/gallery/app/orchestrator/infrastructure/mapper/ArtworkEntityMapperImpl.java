@@ -1,8 +1,8 @@
 package com.gallery.app.orchestrator.infrastructure.mapper;
 
+import com.gallery.app.orchestrator.domain.common.ArtworkStatusEnum;
 import com.gallery.app.orchestrator.domain.model.ArtworkDomain;
 import com.gallery.app.orchestrator.infrastructure.entity.ArtworkEntity;
-import com.gallery.app.orchestrator.infrastructure.entity.ArtworkEntity.ArtworkEntityBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-01T13:42:23+0100",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 1.4.200.v20220802-0458, environment: Java 17.0.4.1 (Oracle Corporation)"
+    date = "2023-03-02T13:45:56+0100",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 @Component
 public class ArtworkEntityMapperImpl implements ArtworkEntityMapper {
@@ -24,35 +24,35 @@ public class ArtworkEntityMapperImpl implements ArtworkEntityMapper {
 
         ArtworkDomain artworkDomain = new ArtworkDomain();
 
-        if ( artworkEntity.getArtistId() != null ) {
-            artworkDomain.setArtistId( artworkEntity.getArtistId() );
-        }
         if ( artworkEntity.getArtworkId() != null ) {
             artworkDomain.setArtworkId( artworkEntity.getArtworkId() );
         }
-        if ( artworkEntity.getArtworkStatus() != null ) {
-            artworkDomain.setArtworkStatus( artworkEntity.getArtworkStatus() );
-        }
-        if ( artworkEntity.getClientId() != null ) {
-            artworkDomain.setClientId( artworkEntity.getClientId() );
+        if ( artworkEntity.getTitle() != null ) {
+            artworkDomain.setTitle( artworkEntity.getTitle() );
         }
         if ( artworkEntity.getDescription() != null ) {
             artworkDomain.setDescription( artworkEntity.getDescription() );
         }
-        if ( artworkEntity.getEditor() != null ) {
-            artworkDomain.setEditor( artworkEntity.getEditor() );
+        if ( artworkEntity.getSigned() != null ) {
+            artworkDomain.setSigned( artworkEntity.getSigned() );
         }
         if ( artworkEntity.getNumeration() != null ) {
             artworkDomain.setNumeration( artworkEntity.getNumeration() );
         }
+        if ( artworkEntity.getEditor() != null ) {
+            artworkDomain.setEditor( artworkEntity.getEditor() );
+        }
         if ( artworkEntity.getPhoto() != null ) {
             artworkDomain.setPhoto( artworkEntity.getPhoto() );
         }
-        if ( artworkEntity.getSigned() != null ) {
-            artworkDomain.setSigned( artworkEntity.getSigned() );
+        if ( artworkEntity.getArtworkStatus() != null ) {
+            artworkDomain.setArtworkStatus( artworkEntity.getArtworkStatus() );
         }
-        if ( artworkEntity.getTitle() != null ) {
-            artworkDomain.setTitle( artworkEntity.getTitle() );
+        if ( artworkEntity.getArtistId() != null ) {
+            artworkDomain.setArtistId( artworkEntity.getArtistId() );
+        }
+        if ( artworkEntity.getClientId() != null ) {
+            artworkDomain.setClientId( artworkEntity.getClientId() );
         }
 
         return artworkDomain;
@@ -78,39 +78,50 @@ public class ArtworkEntityMapperImpl implements ArtworkEntityMapper {
             return null;
         }
 
-        ArtworkEntityBuilder artworkEntity = ArtworkEntity.builder();
+        String artworkId = null;
+        String title = null;
+        String description = null;
+        Boolean signed = null;
+        String numeration = null;
+        String editor = null;
+        String photo = null;
+        ArtworkStatusEnum artworkStatus = null;
+        String artistId = null;
+        String clientId = null;
 
-        if ( artworkDomain.getArtistId() != null ) {
-            artworkEntity.artistId( artworkDomain.getArtistId() );
-        }
         if ( artworkDomain.getArtworkId() != null ) {
-            artworkEntity.artworkId( artworkDomain.getArtworkId() );
-        }
-        if ( artworkDomain.getArtworkStatus() != null ) {
-            artworkEntity.artworkStatus( artworkDomain.getArtworkStatus() );
-        }
-        if ( artworkDomain.getClientId() != null ) {
-            artworkEntity.clientId( artworkDomain.getClientId() );
-        }
-        if ( artworkDomain.getDescription() != null ) {
-            artworkEntity.description( artworkDomain.getDescription() );
-        }
-        if ( artworkDomain.getEditor() != null ) {
-            artworkEntity.editor( artworkDomain.getEditor() );
-        }
-        if ( artworkDomain.getNumeration() != null ) {
-            artworkEntity.numeration( artworkDomain.getNumeration() );
-        }
-        if ( artworkDomain.getPhoto() != null ) {
-            artworkEntity.photo( artworkDomain.getPhoto() );
-        }
-        if ( artworkDomain.getSigned() != null ) {
-            artworkEntity.signed( artworkDomain.getSigned() );
+            artworkId = artworkDomain.getArtworkId();
         }
         if ( artworkDomain.getTitle() != null ) {
-            artworkEntity.title( artworkDomain.getTitle() );
+            title = artworkDomain.getTitle();
+        }
+        if ( artworkDomain.getDescription() != null ) {
+            description = artworkDomain.getDescription();
+        }
+        if ( artworkDomain.getSigned() != null ) {
+            signed = artworkDomain.getSigned();
+        }
+        if ( artworkDomain.getNumeration() != null ) {
+            numeration = artworkDomain.getNumeration();
+        }
+        if ( artworkDomain.getEditor() != null ) {
+            editor = artworkDomain.getEditor();
+        }
+        if ( artworkDomain.getPhoto() != null ) {
+            photo = artworkDomain.getPhoto();
+        }
+        if ( artworkDomain.getArtworkStatus() != null ) {
+            artworkStatus = artworkDomain.getArtworkStatus();
+        }
+        if ( artworkDomain.getArtistId() != null ) {
+            artistId = artworkDomain.getArtistId();
+        }
+        if ( artworkDomain.getClientId() != null ) {
+            clientId = artworkDomain.getClientId();
         }
 
-        return artworkEntity.build();
+        ArtworkEntity artworkEntity = new ArtworkEntity( artworkId, title, description, signed, numeration, editor, photo, artworkStatus, artistId, clientId );
+
+        return artworkEntity;
     }
 }

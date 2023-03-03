@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-01T13:42:21+0100",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 1.4.200.v20220802-0458, environment: Java 17.0.4.1 (Oracle Corporation)"
+    date = "2023-03-02T13:45:53+0100",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 @Component
 public class ArtworkMapperImpl implements ArtworkMapper {
@@ -23,35 +23,35 @@ public class ArtworkMapperImpl implements ArtworkMapper {
 
         ArtworkDto artworkDto = new ArtworkDto();
 
-        if ( artworkDomain.getArtistId() != null ) {
-            artworkDto.setArtistId( artworkDomain.getArtistId() );
-        }
         if ( artworkDomain.getArtworkId() != null ) {
             artworkDto.setArtworkId( artworkDomain.getArtworkId() );
         }
-        if ( artworkDomain.getArtworkStatus() != null ) {
-            artworkDto.setArtworkStatus( artworkDomain.getArtworkStatus() );
-        }
-        if ( artworkDomain.getClientId() != null ) {
-            artworkDto.setClientId( artworkDomain.getClientId() );
+        if ( artworkDomain.getTitle() != null ) {
+            artworkDto.setTitle( artworkDomain.getTitle() );
         }
         if ( artworkDomain.getDescription() != null ) {
             artworkDto.setDescription( artworkDomain.getDescription() );
         }
-        if ( artworkDomain.getEditor() != null ) {
-            artworkDto.setEditor( artworkDomain.getEditor() );
+        if ( artworkDomain.getSigned() != null ) {
+            artworkDto.setSigned( artworkDomain.getSigned() );
         }
         if ( artworkDomain.getNumeration() != null ) {
             artworkDto.setNumeration( artworkDomain.getNumeration() );
         }
+        if ( artworkDomain.getEditor() != null ) {
+            artworkDto.setEditor( artworkDomain.getEditor() );
+        }
         if ( artworkDomain.getPhoto() != null ) {
             artworkDto.setPhoto( artworkDomain.getPhoto() );
         }
-        if ( artworkDomain.getSigned() != null ) {
-            artworkDto.setSigned( artworkDomain.getSigned() );
+        if ( artworkDomain.getArtworkStatus() != null ) {
+            artworkDto.setArtworkStatus( artworkDomain.getArtworkStatus() );
         }
-        if ( artworkDomain.getTitle() != null ) {
-            artworkDto.setTitle( artworkDomain.getTitle() );
+        if ( artworkDomain.getArtistId() != null ) {
+            artworkDto.setArtistId( artworkDomain.getArtistId() );
+        }
+        if ( artworkDomain.getClientId() != null ) {
+            artworkDto.setClientId( artworkDomain.getClientId() );
         }
 
         return artworkDto;
@@ -65,35 +65,35 @@ public class ArtworkMapperImpl implements ArtworkMapper {
 
         ArtworkDomain artworkDomain = new ArtworkDomain();
 
-        if ( artworkDto.getArtistId() != null ) {
-            artworkDomain.setArtistId( artworkDto.getArtistId() );
-        }
         if ( artworkDto.getArtworkId() != null ) {
             artworkDomain.setArtworkId( artworkDto.getArtworkId() );
         }
-        if ( artworkDto.getArtworkStatus() != null ) {
-            artworkDomain.setArtworkStatus( artworkDto.getArtworkStatus() );
-        }
-        if ( artworkDto.getClientId() != null ) {
-            artworkDomain.setClientId( artworkDto.getClientId() );
+        if ( artworkDto.getTitle() != null ) {
+            artworkDomain.setTitle( artworkDto.getTitle() );
         }
         if ( artworkDto.getDescription() != null ) {
             artworkDomain.setDescription( artworkDto.getDescription() );
         }
-        if ( artworkDto.getEditor() != null ) {
-            artworkDomain.setEditor( artworkDto.getEditor() );
+        if ( artworkDto.getSigned() != null ) {
+            artworkDomain.setSigned( artworkDto.getSigned() );
         }
         if ( artworkDto.getNumeration() != null ) {
             artworkDomain.setNumeration( artworkDto.getNumeration() );
         }
+        if ( artworkDto.getEditor() != null ) {
+            artworkDomain.setEditor( artworkDto.getEditor() );
+        }
         if ( artworkDto.getPhoto() != null ) {
             artworkDomain.setPhoto( artworkDto.getPhoto() );
         }
-        if ( artworkDto.getSigned() != null ) {
-            artworkDomain.setSigned( artworkDto.getSigned() );
+        if ( artworkDto.getArtworkStatus() != null ) {
+            artworkDomain.setArtworkStatus( artworkDto.getArtworkStatus() );
         }
-        if ( artworkDto.getTitle() != null ) {
-            artworkDomain.setTitle( artworkDto.getTitle() );
+        if ( artworkDto.getArtistId() != null ) {
+            artworkDomain.setArtistId( artworkDto.getArtistId() );
+        }
+        if ( artworkDto.getClientId() != null ) {
+            artworkDomain.setClientId( artworkDto.getClientId() );
         }
 
         return artworkDomain;

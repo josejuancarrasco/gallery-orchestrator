@@ -2,7 +2,6 @@ package com.gallery.app.orchestrator.infrastructure.mapper;
 
 import com.gallery.app.orchestrator.domain.model.ArtistDomain;
 import com.gallery.app.orchestrator.infrastructure.entity.ArtistEntity;
-import com.gallery.app.orchestrator.infrastructure.entity.ArtistEntity.ArtistEntityBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -10,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-01T13:42:23+0100",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 1.4.200.v20220802-0458, environment: Java 17.0.4.1 (Oracle Corporation)"
+    date = "2023-03-02T13:45:56+0100",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 @Component
 public class ArtistEntityMapperImpl implements ArtistEntityMapper {
@@ -57,18 +56,22 @@ public class ArtistEntityMapperImpl implements ArtistEntityMapper {
             return null;
         }
 
-        ArtistEntityBuilder artistEntity = ArtistEntity.builder();
+        String artistId = null;
+        String givenNames = null;
+        String surnames = null;
 
         if ( artistDomain.getArtistId() != null ) {
-            artistEntity.artistId( artistDomain.getArtistId() );
+            artistId = artistDomain.getArtistId();
         }
         if ( artistDomain.getGivenNames() != null ) {
-            artistEntity.givenNames( artistDomain.getGivenNames() );
+            givenNames = artistDomain.getGivenNames();
         }
         if ( artistDomain.getSurnames() != null ) {
-            artistEntity.surnames( artistDomain.getSurnames() );
+            surnames = artistDomain.getSurnames();
         }
 
-        return artistEntity.build();
+        ArtistEntity artistEntity = new ArtistEntity( artistId, givenNames, surnames );
+
+        return artistEntity;
     }
 }

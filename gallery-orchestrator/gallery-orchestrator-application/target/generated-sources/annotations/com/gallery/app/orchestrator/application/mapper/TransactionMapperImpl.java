@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-01T13:42:21+0100",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 1.4.200.v20220802-0458, environment: Java 17.0.4.1 (Oracle Corporation)"
+    date = "2023-03-02T13:45:53+0100",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 @Component
 public class TransactionMapperImpl implements TransactionMapper {
@@ -23,8 +23,11 @@ public class TransactionMapperImpl implements TransactionMapper {
 
         TransactionDomain transactionDomain = new TransactionDomain();
 
-        if ( transactionDto.getArtworkId() != null ) {
-            transactionDomain.setArtworkId( transactionDto.getArtworkId() );
+        if ( transactionDto.getTransactionId() != null ) {
+            transactionDomain.setTransactionId( transactionDto.getTransactionId() );
+        }
+        if ( transactionDto.getTransactionType() != null ) {
+            transactionDomain.setTransactionType( transactionDto.getTransactionType() );
         }
         if ( transactionDto.getDate() != null ) {
             transactionDomain.setDate( transactionDto.getDate() );
@@ -32,11 +35,8 @@ public class TransactionMapperImpl implements TransactionMapper {
         if ( transactionDto.getPrice() != null ) {
             transactionDomain.setPrice( transactionDto.getPrice() );
         }
-        if ( transactionDto.getTransactionId() != null ) {
-            transactionDomain.setTransactionId( transactionDto.getTransactionId() );
-        }
-        if ( transactionDto.getTransactionType() != null ) {
-            transactionDomain.setTransactionType( transactionDto.getTransactionType() );
+        if ( transactionDto.getArtworkId() != null ) {
+            transactionDomain.setArtworkId( transactionDto.getArtworkId() );
         }
 
         return transactionDomain;
@@ -50,8 +50,11 @@ public class TransactionMapperImpl implements TransactionMapper {
 
         TransactionDto transactionDto = new TransactionDto();
 
-        if ( transactionDomain.getArtworkId() != null ) {
-            transactionDto.setArtworkId( transactionDomain.getArtworkId() );
+        if ( transactionDomain.getTransactionId() != null ) {
+            transactionDto.setTransactionId( transactionDomain.getTransactionId() );
+        }
+        if ( transactionDomain.getTransactionType() != null ) {
+            transactionDto.setTransactionType( transactionDomain.getTransactionType() );
         }
         if ( transactionDomain.getDate() != null ) {
             transactionDto.setDate( transactionDomain.getDate() );
@@ -59,11 +62,8 @@ public class TransactionMapperImpl implements TransactionMapper {
         if ( transactionDomain.getPrice() != null ) {
             transactionDto.setPrice( transactionDomain.getPrice() );
         }
-        if ( transactionDomain.getTransactionId() != null ) {
-            transactionDto.setTransactionId( transactionDomain.getTransactionId() );
-        }
-        if ( transactionDomain.getTransactionType() != null ) {
-            transactionDto.setTransactionType( transactionDomain.getTransactionType() );
+        if ( transactionDomain.getArtworkId() != null ) {
+            transactionDto.setArtworkId( transactionDomain.getArtworkId() );
         }
 
         return transactionDto;

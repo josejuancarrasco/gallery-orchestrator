@@ -1,5 +1,11 @@
-C:\Users\jose_\eclipse-workspace\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\configuration\ApplicationConfiguration.java
-C:\Users\jose_\eclipse-workspace\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\controller\GalleryHomeController.java
-C:\Users\jose_\eclipse-workspace\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\dto\ArtistDto.java
-C:\Users\jose_\eclipse-workspace\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\mapper\ArtistMapper.java
-C:\Users\jose_\eclipse-workspace\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\controller\GalleryArtistController.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\controller\GalleryTransactionController.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\dto\ArtistDto.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\dto\ArtworkDto.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\controller\GalleryHomeController.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\mapper\ArtworkMapper.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\controller\GalleryArtistController.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\configuration\ApplicationConfiguration.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\controller\GalleryArtworkController.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\mapper\TransactionMapper.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\dto\TransactionDto.java
+C:\Users\jose_\Documents\GitHub\gallery-orchestrator\gallery-orchestrator\gallery-orchestrator-application\src\main\java\com\gallery\app\orchestrator\application\mapper\ArtistMapper.java
